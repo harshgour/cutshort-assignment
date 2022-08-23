@@ -8,7 +8,7 @@ const PrimaryButton = (props) => {
 	};
 	return (
 		<button
-			className={`h-10 w-full rounded-md ${generatedCustomClasses()}`}
+			className={`h-12 w-full rounded-md ${generatedCustomClasses()}`}
 			style={{
 				backgroundColor: props.bgColor || "rgb(101,76,277)",
 				color: props.textColor || "white",
