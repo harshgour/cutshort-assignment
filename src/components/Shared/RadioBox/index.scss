@@ -1,0 +1,26 @@
+.radio-box {
+	input[type="radio"].radio-input {
+		/* Add if not using autoprefixer */
+		-webkit-appearance: none;
+		appearance: none;
+		/* For iOS < 15 to remove gradient background */
+		background-color: #fff;
+		/* Not removed via appearance */
+		margin: 0;
+	}
+	.radio-input {
+		& label {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+		}
+	}
+	& .selected {
+		& .option-box {
+			border-color: rgb(101, 76, 277);
+			& .option-icon {
+				color: rgb(101, 76, 277);
+			}
+		}
+	}
+}

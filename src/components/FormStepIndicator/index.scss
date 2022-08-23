@@ -1,0 +1,48 @@
+.step-indicator {
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		transform: translateX(-100%);
+		width: 1.25rem;
+		height: 1px;
+		background-color: rgb(230, 230, 230);
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		transform: translateX(100%);
+		width: 1.25rem;
+		height: 1px;
+		background-color: rgb(230, 230, 230);
+	}
+	&:nth-child(1) {
+		&::before {
+			width: 0;
+			height: 0;
+		}
+	}
+	&:nth-child(4) {
+		&::after {
+			width: 0;
+			height: 0;
+		}
+	}
+	&.selected {
+		&::before,
+		&::after {
+			background-color: rgb(101, 76, 277);
+		}
+	}
+}
+
+@media (min-width: 640px) {
+	.step-indicator {
+		&::before,
+		&::after {
+			width: 2.25rem;
+		}
+	}
+}
